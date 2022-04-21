@@ -1,0 +1,8 @@
+streamlit
+pandas
+pandas-datareader
+PyPortfolioOpt
+plotly
+matplotlib
+seaborn
+gunicorn
