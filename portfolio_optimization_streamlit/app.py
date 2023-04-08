@@ -1,5 +1,5 @@
 import streamlit as st
-from pandas_datareader.data import DataReader
+import yfinance as yf
 from pypfopt.discrete_allocation import DiscreteAllocation, get_latest_prices
 from pypfopt import EfficientFrontier
 from pypfopt import risk_models
@@ -58,7 +58,7 @@ tickers = tickers_string.split(',')
 
 try:
 	# Get Stock Prices using pandas_datareader Library	
-	stocks_df = DataReader(tickers, 'yahoo', start = start_date, end = end_date)['Adj Close']	
+	stocks_df = yf.download(tickers, start=start_date, end=end_date)['Adj Close']
 	# Plot Individual Stock Prices
 	fig_price = px.line(stocks_df, title='Price of Individual Stocks')
 	# Plot Individual Cumulative Returns
