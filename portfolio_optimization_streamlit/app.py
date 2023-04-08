@@ -114,7 +114,7 @@ try:
 	
 except:
 	st.write('Enter correct stock tickers to be included in portfolio separated\
-	by commas WITHOUT spaces, e.g. "MA,FB,V,AMZN,JPM,BA"and hit Enter.')	
+	by commas WITHOUT spaces, e.g. "MA,META,V,AMZN,JPM,BA"and hit Enter.')	
 	
 hide_streamlit_style = """
 <style>
