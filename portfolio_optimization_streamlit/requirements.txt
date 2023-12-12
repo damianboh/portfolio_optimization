@@ -1,7 +1,7 @@
 streamlit
 pandas
 pandas-datareader
-pyportfolioopt==1.5.4
+pyportfolioopt
 plotly
 matplotlib
 seaborn
