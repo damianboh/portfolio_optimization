@@ -58,7 +58,7 @@ tickers = tickers_string.split(',')
 
 try:
 	# Get Stock Prices using pandas_datareader Library	
-	stocks_df = yf.download(tickers, start=start_date, end=end_date)['Adj Close']
+	stocks_df = yf.download(tickers, start=start_date, end=end_date)['Close']
 	# Plot Individual Stock Prices
 	fig_price = px.line(stocks_df, title='Price of Individual Stocks')
 	# Plot Individual Cumulative Returns
@@ -123,3 +123,4 @@ footer {visibility: hidden;}
 </style>
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
